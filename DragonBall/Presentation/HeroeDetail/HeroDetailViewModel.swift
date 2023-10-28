@@ -31,6 +31,7 @@ class HeroDetailViewModel: HeroDetailViewControllerDelegate {
             guard let token = self.secureDataProvider.getToken() else {
                 return
             }
+            // Obtener las ubicaciones de los héroes
             self.apiProvider.getLocations(
                 by: self.hero.id,
                 token: token

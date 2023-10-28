@@ -38,10 +38,12 @@ class LoginViewModel: LoginViewControllerDelegate {
         NotificationCenter.default.removeObserver(self)
     }
 
+    // Método llamado al presionar el botón Login
     func onLoginPressed(email: String?, password: String?) {
         viewState?(.loading(true))
 
         DispatchQueue.global().async {
+            // Validar email y contraseña
             guard self.isValid(email: email) else {
                 self.viewState?(.loading(false))
                 self.viewState?(.showErrorEmail("Indique un email válido"))
@@ -69,7 +71,7 @@ class LoginViewModel: LoginViewControllerDelegate {
             return
         }
 
-        secureDataProvider.save(token: token)
+        secureDataProvider.save(token: token) // Guardar el Token
         viewState?(.navigateToNext)
     }
 

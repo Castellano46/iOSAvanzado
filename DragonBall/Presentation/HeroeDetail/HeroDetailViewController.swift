@@ -56,12 +56,13 @@ class HeroDetailViewController: UIViewController {
     }
     
     private func updateViews(hero: Hero?, heroLocations: HeroLocations) {
-        photo.kf.setImage(with: URL(string: hero?.photo ?? ""))
-        makeRounded(image: photo)
+        photo.kf.setImage(with: URL(string: hero?.photo ?? ""))  // Se cargar la foto usando Kingfisher
+        makeRounded(image: photo) // Imagen circular de la función de abajo
         
         name.text = hero?.name
         heroDescription.text = hero?.description
         
+        // Configuración de mapa
         if let firstLocation = heroLocations.first {
             let coordinate = CLLocationCoordinate2D(
                 latitude: Double(firstLocation.latitude!) ?? 0.0,

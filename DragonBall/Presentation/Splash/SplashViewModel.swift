@@ -41,6 +41,7 @@ class SplashViewModel: SplashViewControllerDelegate {
         viewState?(.loading(true))
 
         DispatchQueue.global().asyncAfter(deadline: .now() + .seconds(2)) {
+            // Comprobar datos de usuario para navegar a la vista correspondiente
             self.isLogged ? self.viewState?(.navigateToHeroes) : self.viewState?(.navigateToLogin)
         }
     }

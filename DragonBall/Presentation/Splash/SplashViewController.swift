@@ -15,6 +15,8 @@ protocol SplashViewControllerDelegate {
     func onViewAppear()
 }
 
+// Posibles estados de la vista Splash
+
 enum SplashViewState {
     case loading(_ isLoading: Bool)
     case navigateToLogin
@@ -39,6 +41,7 @@ class SplashViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Transición a las vistas, Login o Héroes
         switch segue.identifier {
             case "SPLASH_TO_LOGIN":
                 guard let loginViewController = segue.destination as? LoginViewController else { return }

@@ -14,6 +14,7 @@ protocol HeroesViewControllerDelegate {
     var viewModel: HeroesViewModel? { get set }
 
     func onViewAppear()
+    // Obtenemos héroes por su índice en la lista
     func heroBy(index: Int) -> Hero?
     func heroDetailViewModel(index: Int) -> HeroDetailViewControllerDelegate?
     func filterHeroes(with searchText: String) 
@@ -33,7 +34,7 @@ class HeroesViewController: UIViewController {
 
         do {
             try secureDataProvider?.clearToken()
-            
+            // Al pulsar logout volvemos a la pantalla Login
             if let loginVC = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
                 navigationController?.setViewControllers([loginVC], animated: true)
             }

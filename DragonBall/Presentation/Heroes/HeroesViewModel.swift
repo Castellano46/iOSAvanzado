@@ -41,6 +41,7 @@ class HeroesViewModel: HeroesViewControllerDelegate {
         }
     }
 
+    // Obtener héroo por su índice
     func heroBy(index: Int) -> Hero? {
         if index >= 0 && index < heroesCount {
             return heroes[index]
@@ -54,6 +55,7 @@ class HeroesViewModel: HeroesViewControllerDelegate {
         return HeroDetailViewModel(hero: selectedHero, apiProvider: apiProvider, secureDataProvider: secureDataProvider)
     }
 
+    // Filtrar héroes según búsqueda.
     func filterHeroes(with searchText: String) {
         if searchText.isEmpty {
             heroes = originalHeroes

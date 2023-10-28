@@ -28,6 +28,7 @@ class HeroCellView: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
+        // Configuración para la apariencia de la celda
         containerView.layer.cornerRadius = 8.0
         containerView.layer.shadowColor = UIColor.yellow.cgColor
         containerView.layer.shadowOffset = .zero

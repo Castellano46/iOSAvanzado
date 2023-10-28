@@ -13,6 +13,7 @@ protocol LoginViewControllerDelegate {
     func onLoginPressed(email: String?, password: String?)
 }
 
+// Estados posibles de la vista
 enum LoginViewState {
     case loading(_ isLoading: Bool)
     case showErrorEmail(_ error: String?)
