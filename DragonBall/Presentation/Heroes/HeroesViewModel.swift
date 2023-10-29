@@ -41,7 +41,7 @@ class HeroesViewModel: HeroesViewControllerDelegate {
         }
     }
 
-    // Obtener héroo por su índice
+    // Obtener héroe por su índice
     func heroBy(index: Int) -> Hero? {
         if index >= 0 && index < heroesCount {
             return heroes[index]

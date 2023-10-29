@@ -13,7 +13,6 @@ extension NotificationCenter {
 }
 
 // Protocolo para definir los métodos de la API
-
 protocol ApiProviderProtocol {
     func login(for user: String, with password: String)
     func getHeroes(by name: String?, token: String, completion: ((Heroes) -> Void)?)
@@ -28,8 +27,7 @@ class ApiProvider: ApiProviderProtocol {
         static let heroLocations = "/heros/locations"
     }
 
-// Inicio de sesion
-    
+// Inicio de sesión
     func login(for user: String, with password: String) {
         guard let url = URL(string: "\(ApiProvider.apiBaseURL)\(Endpoint.login)") else {
             return
@@ -65,7 +63,6 @@ class ApiProvider: ApiProviderProtocol {
     }
     
 // Obtención de Héroes
-
     func getHeroes(by name: String?, token: String, completion: ((Heroes) -> Void)?) {
         guard let url = URL(string: "\(ApiProvider.apiBaseURL)\(Endpoint.heroes)") else {
             return
@@ -105,7 +102,6 @@ class ApiProvider: ApiProviderProtocol {
     }
     
 // Obtener ubicaciones
-    
     func getLocations(by heroId: String?, token: String, completion: ((HeroLocations) -> Void)?) {
         guard let url = URL(string: "\(ApiProvider.apiBaseURL)\(Endpoint.heroLocations)") else {
             return

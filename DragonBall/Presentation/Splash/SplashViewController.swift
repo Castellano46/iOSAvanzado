@@ -16,7 +16,6 @@ protocol SplashViewControllerDelegate {
 }
 
 // Posibles estados de la vista Splash
-
 enum SplashViewState {
     case loading(_ isLoading: Bool)
     case navigateToLogin

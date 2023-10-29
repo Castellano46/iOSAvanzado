@@ -39,7 +39,6 @@ class HeroDetailViewModel: HeroDetailViewControllerDelegate {
                 self?.heroLocations = heroLocations
                 self?.viewState?(.update(hero: self?.hero,
                                         locations: heroLocations))
-                
             }
         }
     }
