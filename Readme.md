@@ -4,7 +4,7 @@ Para su elaboración se han utilizado librerias externas como **Kingfisher** y *
 
 ## Empecemos 👇
 
-*Como temática para la app se ha utilizado el universo de Dragon Ball. Al ingresar en la App nos aparece una primera página de Login que nos dará paso a un listado de los heroes que forman parte de la serie de manga; Dragon Ball. Si pulsamos sobre uno de los héroes nos aparecerá, en otra pantalla, su descripción además de su localización exacta en el mapa.*
+*Como temática para esta app se ha utilizado el universo de Dragon Ball. Al ingresar en la App nos aparece una primera página de Login que nos dará paso a un listado de los heroes que forman parte de la serie de manga; Dragon Ball. Si pulsamos sobre uno de los héroes nos aparecerá, en otra pantalla, su descripción además de su localización exacta en el mapa.*
 
 <table>
   <tr>
